@@ -19,12 +19,17 @@
 		<input type="submit" value="로그인" class="btn-sum">
 	</form>
 	</fieldset>
+	<div><button class="btn join">가입</button></div>
 		
 	<script>
 $(loadedHandler);
 function loadedHandler(){
+	$(".btn.join").on("click", btnJoinClickHandler);
 	$("#frm-login .btn-sum").on("click", btnSumClickHandler);
 	$("#frm-login .help").on("click", helpLinkClickHandler);
+}
+function btnJoinClickHandler(){
+	location.href="${pageContext.request.contextPath}/join";
 }
 function btnSumClickHandler(){
 	$.ajax({

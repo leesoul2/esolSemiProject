@@ -6,47 +6,65 @@
 <head>
 <meta charset="UTF-8">
 <title>Main page</title>
+<link href="${pageContext.request.contextPath}/resources/css/reset.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/main_body.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-
-<h1>Semim main</h1>
+<div class="top-tab-collect">
+<div class="top-tab">
 <c:choose>
 	<c:when test="${empty sssLogin}">
-	<div><button class="btn login">로그인</button></div>
-	<div><button class="btn join">가입</button></div>
+	<div class="tqb login">로그인</div>
 	</c:when>
 	<c:otherwise>
 	<form>
-	<div><button class="btn logout">로그아웃</button></div>
+	<div class="tqb logout">로그아웃</div>
 	</form>
-	<div><button class="btn mypage">마이페이지</button></div>
 	</c:otherwise>
 
 </c:choose>
-	<div><button class="btn board">게시판</button></div>
+	<div class="tqb shopping">장바구니</div>
+</div>
+<div class="tab">
+	<div class="tqb store">상점</div>
+	<div>
+	<div class="tqb store home">홈</div>
+	<div class="tqb store wishlist">찜 목록</div>
+	</div>
+	<div class="tqb community">커뮤니티</div>
+	<div>
+	<div class="tqb community home">홈</div>
+	<div class="tqb community debate">토론</div>
+	</div>
+	<div class="tqb library">라이브러리</div>
+	<div class="tqb support">지원</div>
+</div>
+</div>
 
 <script>
 $(loadedHandler);
 function loadedHandler(){
-	$(".btn.join").on("click", btnJoinClickHandler);
-	$(".btn.login").on("click", btnLoginClickHandler);
-	$(".btn.logout").on("click", btnLogoutClickHandler);
-	$(".btn.board").on("click", btnBoardClickHandler);
+	$(".tab.login").on("click", tabLoginClickHandler);
+	$(".tab.logout").on("click", tabLogoutClickHandler);
+	$(".tab .tab.shopping").on("click", tabShoppingClickHandler);
+	$(".tab .tab.store.home").on("click", tabStoreHomeClickHandler);
+	$(".tab .tab.store.wishlist").on("click", tabStoreWishlistClickHandler);
+	$(".tab .tab.community.home").on("click", tabcommunityHomeClickHandler);
+	$(".tab .tab.community.debate").on("click", tabCommunityDebateClickHandler);
+	$(".tab .tab.library").on("click", tabLibraryClickHandler);
+	$(".tab .tab.support").on("click", tabSupportClickHandler);
 }
-function btnJoinClickHandler(){
-	location.href="${pageContext.request.contextPath}/join";
-}
-function btnLoginClickHandler(){
+function tabLoginClickHandler(){
 	location.href="${pageContext.request.contextPath}/login";
 }
-function btnMypageClickHandler(){
-	location.href="${pageContext.request.contextPath}/mypage";
+function tabcommunityHomeClickHandler(){
+	location.href="${pageContext.request.contextPath}/community/home";
 }
-function btnBoardClickHandler(){
-	location.href="${pageContext.request.contextPath}/board/list";
+function tabCommunityDebateClickHandler(){
+	location.href="${pageContext.request.contextPath}/community/debate";
 }
-function btnLogoutClickHandler(){
+function tabLogoutClickHandler(){
 	location.href="${pageContext.request.contextPath}/logout";
 		alert("로그아웃 되었습니다.");
 	var frmlogout = document.getElementById("frm-logout");
@@ -54,6 +72,21 @@ function btnLogoutClickHandler(){
 	frmlogout.method = "post";
 	frmlogout.submit();
 	}
+function tabShoppingClickHandler(){
+	location.href="${pageContext.request.contextPath}/shopping";
+}
+function tabcommunityClickHandler(){
+	location.href="${pageContext.request.contextPath}/store/home";
+}
+function tabcommunityClickHandler(){
+	location.href="${pageContext.request.contextPath}/store/wishlist";
+}
+function tabcommunityClickHandler(){
+	location.href="${pageContext.request.contextPath}/community/home";
+}
+function tabcommunityClickHandler(){
+	location.href="${pageContext.request.contextPath}/community/debate";
+}
 </script>
 
 </body>
