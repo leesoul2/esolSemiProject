@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -7,42 +7,59 @@
 <meta charset="UTF-8">
 <title>Main page</title>
 <link href="${pageContext.request.contextPath}/resources/css/reset.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/resources/css/main_body.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/main_header.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-<div class="top-tab-collect">
-<div class="top-tab">
-<c:choose>
-	<c:when test="${empty sssLogin}">
-	<div class="tqb login">로그인</div>
-	</c:when>
-	<c:otherwise>
-	<form>
-	<div class="tqb logout">로그아웃</div>
-	</form>
-	</c:otherwise>
 
-</c:choose>
-	<div class="tqb shopping">장바구니</div>
-</div>
-<div class="tab">
-	<div class="tqb store">상점</div>
-	<div>
-	<div class="tqb store home">홈</div>
-	<div class="tqb store wishlist">찜 목록</div>
-	</div>
-	<div class="tqb community">커뮤니티</div>
-	<div>
-	<div class="tqb community home">홈</div>
-	<div class="tqb community debate">토론</div>
-	</div>
-	<div class="tqb library">라이브러리</div>
-	<div class="tqb support">지원</div>
-</div>
-</div>
+	<header>
+		<div class="top-tab-cullect">
+			<div class="top-tab">
+				<c:choose>
+					<c:when test="${empty sssLogin}">
+						<div class="tab login" onclick="tabLoginClickHandler()">로그인</div>
+					</c:when>
+					<c:otherwise>
+						<form>
+							<div class="tab logout">로그아웃</div>
+						</form>
+					</c:otherwise>
 
-<script>
+				</c:choose>
+				<div>ㅣ</div>
+				<div class="tab shopping" onclick="tabShoppingClickHandler()">장바구니</div>
+			</div>
+			<div class="tab">
+				<div class="tab store">상점</div>
+				<ul>
+					<li>
+						<div class="tab store home" onclick="tabStoreHomeClickHandler()">홈</div>
+					</li>
+					<li>
+						<div class="tab store wishlist"
+							onclick="tabStoreWishlistClickHandler()">찜 목록</div>
+					</li>
+				</ul>
+				<div class="tab community">커뮤니티</div>
+				<ul>
+					<li>
+						<div class="tab community home"
+							onclick="tabcommunityHomeClickHandler()">홈</div>
+					</li>
+					<li>
+						<div class="tab community debate"
+							onclick="tabCommunityDebateClickHandler()">토론</div>
+					</li>
+				</ul>
+				<div class="tab library" onclick="tabLibraryClickHandler()">라이브러리</div>
+				<div class="tab support" onclick="tabSupportClickHandler()">지원</div>
+			</div>
+		</div>
+	</header>
+
+
+
+	<script>
 $(loadedHandler);
 function loadedHandler(){
 	$(".tab.login").on("click", tabLoginClickHandler);
