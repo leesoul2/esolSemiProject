@@ -27,6 +27,7 @@
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
 
 
+<link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet">
 <!-- [5] body Layout 영역 - 화면설계서 -->
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 

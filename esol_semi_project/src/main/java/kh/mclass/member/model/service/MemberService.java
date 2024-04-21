@@ -5,7 +5,10 @@ import static kh.mclass.jdbc.common.JdbcTemplate.getSemiConnection;
 
 import java.sql.Connection;
 
+import org.apache.ibatis.session.SqlSession;
+
 import kh.mclass.member.model.dao.MemberDao;
+import kh.mclass.member.model.dto.MemberDto;
 import kh.mclass.member.model.dto.MemberInfoDto;
 import kh.mclass.member.model.dto.MemberLoginDto;
 
@@ -16,7 +19,7 @@ public class MemberService {
 		MemberInfoDto result = null;
 		Connection conn = getSemiConnection(true);
 		result = dao.selectInfoLogin(conn, dto);
-		System.out.println("result는 현재"+ result +"상태입니다.");
+		System.out.println("**********result는 현재"+ result +"상태입니다.");
 		close(conn);
 		return result;
 	}
@@ -31,13 +34,20 @@ public class MemberService {
 	}
 	
 	
-	public MemberInfoDto loginGetInfo(MemberLoginDto dto) {
-		MemberInfoDto result = null;
+//	public MemberInfoDto loginGetInfo(MemberLoginDto dto) {
+//		MemberLoginDto result = null;
+//		Connection conn = getSemiConnection(true);
+//		result = dao.loginGetInfo(conn, dto);
+//		close(conn);
+//		return result;
+//	}
+	
+	public MemberDto insert(MemberDto dto) {
+		MemberDto result = null;
 		Connection conn = getSemiConnection(true);
-		result = dao.loginGetInfo(conn, dto);
+		result = dao.joinInfo(conn, dto);
 		close(conn);
 		return result;
 	}
-	
 
 }

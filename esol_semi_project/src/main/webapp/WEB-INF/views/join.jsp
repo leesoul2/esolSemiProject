@@ -1,14 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Join page</title>
-<!-- [1] 해상도 - 최적해상도1050px 결정 (최대/최소 지원범위-테스트영역) -->
-<!-- [2] content 영역 960px 80vw 90%, 배치(중앙,왼쪽) -->
-<!-- [3] reset.css 검토 -  폴더 경로 확정 -->
 <link href="${pageContext.request.contextPath}/resources/css/reset.css" rel="stylesheet">
 
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
@@ -26,6 +23,7 @@
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
 
 
+<link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet">
 <!-- [5] body Layout 영역 - 화면설계서 -->
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 
@@ -43,84 +41,93 @@
 	crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <style>
-	.warn-text, .warn-u-name, .warn-pwd, .warn-check{
-	display: none;
+body{
+	background: #1C1C1C;
+	color: white;
 }
 </style>
 </head>
 <body>
 <h1>계정 만들기</h1>
-<fieldset>
 <div class="warning">
-
-<div class="warn-text">올바른 메일 주소를 입력하세요.
-메일 주소란에 동일한 주소를 입력하세요.</div>
-<div class="warn-u-name">사용할 계정 이름을 입력하세요.</div>
-<div class="warn-pwd">비밀번호를 올바르게 작성하세요.</div>
-<div class="warn-check">계속하려면 Steam 이용 약관에 동의해야 합니다.</div>
-
+    <div class="warn-reEmail">올바른 메일 주소를 입력하세요. 메일 주소란에 동일한 주소를 입력하세요.</div>
+    <div class="warn-email">올바른 메일 주소를 입력하세요. 이메일 주소 확인란에 이메일을 입력해 주세요.</div>
+    <div class="warn-u-name">문자가 최소 3자 이상이고 a-z, A-Z, 0-9 또는 _ 문자로만 구성된 계정을 입력하세요.
+선택하신 계정 이름은 사용할 수 없습니다. 다른 이름을 선택해 주세요.</div>
+    <div class="warn-pwd">귀하께서 입력하신 비밀번호는 허용되지 않습니다. 최소한 8자 이상으로 다른 비밀번호를 정하세요.</div>
+    <div class="warn-re-pwd">비밀번호 확인란을 입력해 주세요.</div>
+    <div class="warn-pwd-check">비밀번호란에 동일한 비밀번호를 입력하세요.</div>
+    <div class="warn-check">계속하려면 Steam 이용 약관에 동의해야 합니다.</div>
 </div>
 <form id="frm-join">
-<div>이메일 주소</div>
-<input type="text" name="email" class="email">
-
-<div>이메일 확인</div>
-<input type="text" name="re-email" class="re-email">
-
-<div>사용할 계정 이름</div>
-<input type="text" name="u-name" class="u-name">
-
-<div>비밀번호</div>
-<input type="password" name="pwd" class="pwd">
-
-<div>비밀번호 확인</div>
-<input type="password" name="re-pwd" class="re-pwd">
-
-<div>
-<input type="checkbox" class="check">본인은 만 13세 이상이며 Steam 이용 약관 및 Valve 개인정보 보호정책에 동의합니다
-</div>
-
-<input type="submit" value="가입하기" class="btn-join">
+    <div>이메일 주소</div>
+    <input type="text" name="userEmail" class="email">
+    <div>이메일 확인</div>
+    <input type="text" name="re-email" class="re-email">
+    <div>사용할 계정 이름</div>
+    <input type="text" name="userId" class="u-name">
+    <div>비밀번호</div>
+    <input type="password" name="userPwd" class="pwd">
+    <div>비밀번호 확인</div>
+    <input type="password" name="re-pwd" class="re-pwd">
+    <div>
+        <input type="checkbox" class="check">본인은 만 13세 이상이며 Steam 이용 약관 및 Valve 개인정보 보호정책에 동의합니다
+    </div>
+    <input type="submit" value="가입하기" class="btn-join">
 </form>
-
-</fieldset>
 <script>
-$(loadedHandler);
-	var form = document.getElementsById("frm-join");
-	var check = document.queryselector(".check");
-	var email = document.queryselector("email");
-	var reEmail = document.queryselector("re-email");
-	var pwd = document.queryselector("pwd");
-	var rePwd = document.queryselector("re-pwd");
-	
-function loadedHandler(){
-	$("#frm-join .btn-join").on("click", btnJoinClickHandler);
-}
-function btnJoinClickHandler(){
-	form.addEventListener("focus", function(event){
-		var uName = document.queryselector("u-name");
-		var errorMessageName = document.queryselector("warn-u-name");
-	var warnText = document.queryselector("warn-text");
-		if(uName === ""){
-			errorMessageName.style.display = "block";
-		}else{
-			
-		}
-	}
-		
-		
-		
-		
-		
-		
-		
-		
-	});
-}
+document.addEventListener("submit", function(event) {
+    event.preventDefault(); // 폼 제출 기본 동작을 막음
+
+    var email = document.querySelector(".email").value;
+    var reEmail = document.querySelector(".re-email").value;
+    var rePwd = document.querySelector(".re-pwd").value;
+    var uName = document.querySelector(".u-name").value;
+    var pwd = document.querySelector(".pwd").value;
+    var check = document.querySelector(".check").checked;
+
+    document.querySelectorAll(".warn-email, .warn-reEmail, .warn-u-name, .warn-pwd, .warn-re-pwd, .warn-pwd-check, .warn-check").forEach(function(element) {
+        element.style.display = "none"; // 경고 메시지를 초기에 숨김
+    });
+
+    // 유효성 검사
+    if (!check) {
+        document.querySelector(".warn-check").style.display = "block"; // 약관 동의 확인 경고 메시지를 표시
+        return;
+    }
+
+    if (email === "") {
+        document.querySelector(".warn-email").style.display = "block"; // 이메일 입력 경고 메시지를 표시
+   		return;
+    }
+    
+    if (email !== reEmail) {
+        document.querySelector(".warn-reEmail").style.display = "block"; // 이메일 일치 확인 경고 메시지를 표시
+   		return;
+    }
+
+    if (uName === "") {
+        document.querySelector(".warn-u-name").style.display = "block"; // 사용자 이름 입력 경고 메시지를 표시
+   		return;
+    }
+    
+    if (pwd === "") {
+        document.querySelector(".warn-pwd").style.display = "block"; // 이메일 일치 확인 경고 메시지를 표시
+   		return;
+    }
+    
+    if (rePwd === "") {
+        document.querySelector(".warn-re-pwd").style.display = "block"; // 이메일 일치 확인 경고 메시지를 표시
+   		return;
+    }
+    
+
+    // 비밀번호 일치 여부 확인
+    if (pwd !== rePwd) {
+        document.querySelector("warn-pwd-check").style.display = "block"; // 비밀번호 일치 확인 경고 메시지를 표시
+   		return;
+    }
+});
 </script>
-
-
-
-
 </body>
 </html>

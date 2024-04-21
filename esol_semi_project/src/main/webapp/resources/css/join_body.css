@@ -1,0 +1,10 @@
+
+.warn-email, 
+.warn-reEmail,
+.warn-u-name,
+.warn-pwd,
+.warn-re-pwd,
+.warn-pwd-check,
+.warn-check {
+	display: none;
+}

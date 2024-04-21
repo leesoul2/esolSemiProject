@@ -43,10 +43,9 @@ public class LoginController extends HttpServlet {
 		
 		//성공: 1
 		// 실패 : 0
-		int result =0;
-//		int result = new MemberService().login(dto);
+		int result = new MemberService().login(dto);
 		MemberInfoDto resultInfo = new MemberService().selectInfoLogin(dto);
-		System.out.println("resultInfo:"+resultInfo);
+		System.out.println("********resultInfo:**********"+resultInfo);
 		if(resultInfo != null) {
 			request.getSession().setAttribute("loginInfo", resultInfo);
 			result = 1;

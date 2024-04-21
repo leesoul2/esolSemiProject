@@ -34,8 +34,8 @@
 
 .store-sub,
 .community-sub {
+	display: inline-block;
 	position: relative;
-	display: none;
 	padding: 0;
 	margin: 0;
 	border: 1px solid white;
