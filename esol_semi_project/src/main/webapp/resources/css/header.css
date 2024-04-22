@@ -31,32 +31,40 @@
 	top: 50px;
 	margin: 0 auto;
 }
-
-.store-sub,
-.community-sub {
-	display: inline-block;
+.tab.store,
+.tab.community{
 	position: relative;
+}
+
+.tab.store ul{
+	display: none;
+	width: 220%;
+	position: absolute;
 	padding: 0;
 	margin: 0;
 	border: 1px solid white;
-	top: 60px;
-	left: 340px;
+	top: 50px;
+	left: 20px;
 	background: black;
-  }
-
-.tab.store:hover  ul.store-sub
-   {
-    display: inline-block;
-    border: 1px solid white;
-    transition: 4s;
-    background: navy;
-  }
- .tab.community:hover + ul.community-sub{
-    display: inline-block;
-    border: 1px solid white;
-    transition: 4s;
-    background: navy;
-  }
+}
+.tab.community ul{
+	display: none;
+	width: 100%;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 1px solid white;
+	top: 50px;
+	left: 20px;
+	background: black;
+}
+  
+.tab.store:hover ul{
+	display: inline-block;
+}
+.tab.community:hover ul{
+	display: inline-block;
+}
 .tab > ul > li > div {
     padding: 10px;
     float: left;

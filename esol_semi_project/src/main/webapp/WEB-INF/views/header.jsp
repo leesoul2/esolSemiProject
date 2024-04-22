@@ -63,30 +63,32 @@
 			</div>
 			<div class="tab">
 				<div class="parentsTab">
-					<div class="tab store">상점</div>
-					<div class="tab community">커뮤니티</div>
+					<div class="tab store">상점
+						<ul>
+							<li>
+								<div class="tab store home" onclick="tabStoreHomeClickHandler()">홈</div>
+							</li>
+							<li>
+								<div class="tab store wishlist"
+									onclick="tabStoreWishlistClickHandler()">찜 목록</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab community">커뮤니티
+						<ul>
+							<li>
+								<div class="tab community home"
+									onclick="tabcommunityHomeClickHandler()">홈</div>
+							</li>
+							<li>
+								<div class="tab community debate"
+									onclick="tabCommunityDebateClickHandler()">토론</div>
+							</li>
+						</ul>
+					</div>
 					<div class="tab library" onclick="tabLibraryClickHandler()">라이브러리</div>
 					<div class="tab support" onclick="tabSupportClickHandler()">지원</div>
 				</div>
-				<ul class="store-sub">
-					<li>
-						<div class="tab store home" onclick="tabStoreHomeClickHandler()">홈</div>
-					</li>
-					<li>
-						<div class="tab store wishlist"
-							onclick="tabStoreWishlistClickHandler()">찜 목록</div>
-					</li>
-				</ul>
-				<ul class="community-sub">
-					<li>
-						<div class="tab community home"
-							onclick="tabcommunityHomeClickHandler()">홈</div>
-					</li>
-					<li>
-						<div class="tab community debate"
-							onclick="tabCommunityDebateClickHandler()">토론</div>
-					</li>
-				</ul>
 			</div>
 
 		</div>
