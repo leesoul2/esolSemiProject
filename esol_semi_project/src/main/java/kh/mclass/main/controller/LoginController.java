@@ -37,9 +37,9 @@ public class LoginController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String memId = request.getParameter("memId");
-		String memPwd = request.getParameter("memPwd");
-		MemberLoginDto dto = new MemberLoginDto(memId, memPwd);
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		MemberLoginDto dto = new MemberLoginDto(id, pwd);
 		System.out.println("/login doPost dto: "+ dto);
 //		/login doPost dto: MemberDto [memId=aaa, memPwd=bbb]
 
@@ -53,8 +53,6 @@ public class LoginController extends HttpServlet {
 			//로그인 성공
 			request.getSession().setAttribute("sssLogin", resultInfo);
 			result =1;
-			System.out.println(result);
-			response.sendRedirect(request.getContextPath()+"/main");
 		}
 		response.getWriter().append(String.valueOf(result));
 	}

@@ -35,12 +35,12 @@ public class JoinController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("여기여기");
 		String memId = request.getParameter("id");
 		String memPwd = request.getParameter("pwd");
 		String memEmail = request.getParameter("email");
 		MemberDto dto = new MemberDto(memId, memPwd, memEmail);
 		int result = new MemberService().insert(dto);
+		System.out.println("조인컨트롤러 두포스트 실행 완료.");
 		if(result < 0 ) {
 			// 회원가입실패시
 			// TODO

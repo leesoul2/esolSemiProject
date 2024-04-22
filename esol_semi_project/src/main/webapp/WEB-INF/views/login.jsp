@@ -49,29 +49,28 @@
 <div class="login-form">
 	<h1>로그인</h1>
 	<fieldset>
-		<form id="frm-login">
-			<div>계정 이름으로 로그인</div>
-			<input type="text" name="memId">
-			<div>비밀번호</div>
-			<input type="password" name="memPwd">
-			<div>
-			 <input
-				type="submit" value="로그인" class="btn-sum">
-			</div>
-		</form>
-	</fieldset>
-		<button class="btn join">가입</button>
+	<legend>로그인 ajax</legend>
+	<form id="frm-login">
+		<div><label>아이디</label><input type="text" name="id"></div>
+		<div><label>패스워드</label><input type="password" name="pwd"></div>
+		<div><input type="button" value="로그인" class="btn submit"></div>
+	</form>
+</fieldset> 
 </div>
-	<script>
+
+<script>
 $(loadedHandler);
 function loadedHandler(){
-	$(".btn.join").on("click", btnJoinClickHandler);
-	$("#frm-login .btn-sum").on("click", btnSumClickHandler);
+	//event 등록
+	$("#frm-login .btn.submit").on("click", frmClickHandler);
 }
-function btnJoinClickHandler(){
-	location.href="${pageContext.request.contextPath}/join";
-}
-function btnSumClickHandler(){
+
+function frmClickHandler(){
+	console.log("클릭");
+	//console.log(document.getElementById("frm-login").serialize());
+	console.log($("#frm-login").serialize()); // query string 형태로 만들어줌.// id=sss&pwd=vvv
+	//{id : $("[name=id]").val() , pwd : $("[name=pwd]").val()  }	
+	//$("#frm-login").serialize()
 	$.ajax({
 		url:"${pageContext.request.contextPath }/login"
 		, method : "post"
@@ -79,15 +78,9 @@ function btnSumClickHandler(){
 		, success : function(result){
 			console.log(result);
 			if(result == 1 ){
-				var prePage = "${prePage}";
-				if(prePage == "write"){
-					location.href="${pageContext.request.contextPath}/main";
-				}else{
-					location.href="${pageContext.request.contextPath}/main";
-					
-				}
+				alert("반갑습니다.");
+				location.href="${pageContext.request.contextPath}/main";
 			}else {
-					location.href="${pageContext.request.contextPath}/main";
 				alert("아이디 또는 패스워드가 일치하지 않습니다.\n다시 확인하고 로그인해주세요.");
 				$("[name=pwd]").val("");
 			}
@@ -98,20 +91,39 @@ function btnSumClickHandler(){
 					+ "error: "+error);
 		}
 	});
+	
 }
 
+</script>
 
 
 
-	
-	
-	
-	
-	</script>
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
