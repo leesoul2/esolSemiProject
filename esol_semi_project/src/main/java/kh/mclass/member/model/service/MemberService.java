@@ -1,11 +1,8 @@
 package kh.mclass.member.model.service;
 
-import static kh.mclass.jdbc.common.JdbcTemplate.close;
-import static kh.mclass.jdbc.common.JdbcTemplate.getSemiConnection;
-
+import static kh.mclass.jdbc.common.JdbcTemplate.*;
 import java.sql.Connection;
-
-import org.apache.ibatis.session.SqlSession;
+import java.util.List;
 
 import kh.mclass.member.model.dao.MemberDao;
 import kh.mclass.member.model.dto.MemberDto;
@@ -13,41 +10,68 @@ import kh.mclass.member.model.dto.MemberInfoDto;
 import kh.mclass.member.model.dto.MemberLoginDto;
 
 public class MemberService {
-	private MemberDao dao = new MemberDao();
-
-	public MemberInfoDto selectInfoLogin(MemberLoginDto dto) {
+	private MemberDao dao = new MemberDao(); 
+	
+	// select checkId
+	public MemberInfoDto loginGetInfo(MemberLoginDto dto) {
 		MemberInfoDto result = null;
 		Connection conn = getSemiConnection(true);
-		result = dao.selectInfoLogin(conn, dto);
-		System.out.println("**********result는 현재"+ result +"상태입니다.");
+		result = dao.loginGetInfo(conn, dto);
 		close(conn);
 		return result;
 	}
 
 	
-	public int login(MemberLoginDto dto) {
+	// select checkId
+	public int selectCheckId(String memId) {
 		int result = 0;
 		Connection conn = getSemiConnection(true);
-		result = dao.login(conn, dto);
+		result = dao.selectCheckId(conn, memId);
 		close(conn);
 		return result;
 	}
 	
 	
-//	public MemberInfoDto loginGetInfo(MemberLoginDto dto) {
-//		MemberLoginDto result = null;
-//		Connection conn = getSemiConnection(true);
-//		result = dao.loginGetInfo(conn, dto);
-//		close(conn);
-//		return result;
-//	}
 	
-	public MemberDto insert(MemberDto dto) {
+	
+	// select list - all
+	public List<MemberDto> selectAllList() {
+		List<MemberDto> result = null;
+		Connection conn = getSemiConnection(true);
+		result = dao.selectAllList(conn);
+		close(conn);
+		return result;
+	}
+	// select one
+	public MemberDto selectOne(String memId) {
 		MemberDto result = null;
 		Connection conn = getSemiConnection(true);
-		result = dao.joinInfo(conn, dto);
+		result = dao.selectOne(conn, memId);
 		close(conn);
 		return result;
 	}
-
+	// insert
+	public int insert(MemberDto dto) {
+		int result = 0;
+		Connection conn = getSemiConnection(true);
+		result = dao.insert(conn, dto);
+		close(conn);
+		return result;
+	}
+	// update
+	public int update(MemberDto dto) {
+		int result = 0;
+		Connection conn = getSemiConnection(true);
+		result = dao.update(conn, dto);
+		close(conn);
+		return result;
+	}
+	// delete
+	public int delete(String memId) {
+		int result = 0;
+		Connection conn = null;
+		result = dao.delete(conn, memId);
+		close(conn);
+		return result;
+	}
 }

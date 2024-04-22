@@ -7,4 +7,6 @@
 .warn-pwd-check,
 .warn-check {
 	display: none;
+	color: red;
 }
+

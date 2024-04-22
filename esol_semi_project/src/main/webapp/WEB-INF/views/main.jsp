@@ -48,8 +48,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-[[ ${loginInfo } ]]
-[[ <%=session.getAttribute("loginInfo") %> ]] 
 	
 
 	<section>
@@ -57,12 +55,25 @@
 			<div>
 				<div class="">
 					<div class="">인기순</div>
+						<ul id="loadGame-popularity">
+						
+						
+						
+						
+						
+						</ul>
 					<div class="">최신순</div>
 					<img alt="" src="https://dummyimage.com/184x69/000/fff">
 				</div>
 			</div>
 		</article>
 	</section>
+<script>
+$(loadedHandler);
+function loadedHandler(){
+	
+}
+</script>
 
 
 	

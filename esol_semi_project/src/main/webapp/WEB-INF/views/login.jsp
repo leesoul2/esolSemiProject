@@ -79,7 +79,6 @@ function btnSumClickHandler(){
 		, success : function(result){
 			console.log(result);
 			if(result == 1 ){
-				alert("반갑습니다.");
 				var prePage = "${prePage}";
 				if(prePage == "write"){
 					location.href="${pageContext.request.contextPath}/main";

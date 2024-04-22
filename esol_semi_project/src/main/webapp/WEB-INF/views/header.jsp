@@ -30,7 +30,6 @@
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 
 <!-- body 영역 style -->
-<link href="${pageContext.request.contextPath}/resources/css/login_body.css" rel="stylesheet">
 <!-- footer 영역 style -->
 <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 
@@ -44,22 +43,22 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
+[[ ${sssLogin } ]] <br>
+[[ <%=session.getAttribute("sssLogin") %> ]]
 	<header>
 		<div class="top-tab-cullect">
 			<div class="top-tab">
-				<c:choose>
-					<c:when test="${empty sssLogin}">
+					<c:if test="${empty sssLogin}">
 						<div class="tab login" onclick="tabLoginClickHandler()">로그인</div>
-					</c:when>
-					<c:otherwise>
-						<form>
+					</c:if>
+					<c:if test="${not empty sssLogin}">
+						<form id="frm-logout">
 							<div class="tab logout">로그아웃</div>
-				<div>ㅣ</div>
-				<div class="tab shopping" onclick="tabShoppingClickHandler()">장바구니</div>
+					</c:if>
 						</form>
-					</c:otherwise>
+							<div>ㅣ</div>
+							<div class="tab shopping" onclick="tabShoppingClickHandler()">장바구니</div>
 
-				</c:choose>
 			</div>
 			<div class="tab">
 				<div class="parentsTab">
@@ -98,8 +97,10 @@
 $(loaedHandler);
 function loaedHandler(){
 	$(".tab.login").on("click", tabLoginClickHandler);
+	$(".tab.logout").on("click", tabLogoutClickHandler);
 	$(".tab.store.home").on("click", tabStoreHomeClickHandler);
 	$(".tab.store.wishlist").on("click", tabStoreWishlistClickHandler);
+	$(".tab.community.home").on("click", tabcommunityHomeClickHandler);
 }
 
 function tabLoginClickHandler(){
@@ -109,7 +110,18 @@ function tabStoreHomeClickHandler(){
 	location.href="${pageContext.request.contextPath}/main";
 }
 function tabStoreWishlistClickHandler(){
-	location.href="${pageContext.request.contextPath}/store/wishlist";
+	window.location.href ="${pageContext.request.contextPath}/wishlist";
+}
+function tabcommunityHomeClickHandler(){
+	location.href="${pageContext.request.contextPath}/community/home";
+}
+function tabLogoutClickHandler(){
+alert("로그아웃되었습니다.");
+		
+	var frmlogout = document.getElementById("frm-logout");
+	frmlogout.action = "${pageContext.request.contextPath}/logout";
+	frmlogout.method = "post";
+	frmlogout.submit();
 }
 	
 	

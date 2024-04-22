@@ -1,29 +1,34 @@
 package kh.mclass.member.model.dto;
 
 public class MemberDto {
-	private String memEmail;
 	private String memId;
 	private String memPwd;
+	private String memEmail;
 
-	public MemberDto(String memEmail, String memId, String memPwd) {
+	public MemberDto(String memId, String memPwd, String memEmail) {
 		super();
-		this.memEmail = memEmail;
 		this.memId = memId;
 		this.memPwd = memPwd;
+		this.memEmail = memEmail;
 	}
+
 	@Override
 	public String toString() {
-		return "MemberInfoDto [memEmail=" + memEmail + ", memId=" + memId + ", memPwd=" + memPwd + "]";
+		return "MemberDto [memId=" + memId + ", memPwd=" + memPwd + ", memEmail=" + memEmail + "]";
 	}
-	public String getMemEmail() {
-		return memEmail;
-	}
+
 	public String getMemId() {
 		return memId;
 	}
+
 	public String getMemPwd() {
 		return memPwd;
 	}
+
+	public String getMemEmail() {
+		return memEmail;
+	}
+	
 
 
 

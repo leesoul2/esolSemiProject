@@ -1,3 +1,4 @@
+/* 상단탭 전체 묶음 */
 .top-tab-collect{
 	width: 900px;
 	margin: 0 auto;
@@ -8,6 +9,7 @@
 	display: flex;
 }
 .tab.login,
+.tab.logout,
 .tab.shopping,
 .tab.store,
 .tab.community,
@@ -22,15 +24,15 @@
 }
 
 
-/* 부모요소 */
 .parentsTab {
 	display: flex;
 	position: relative;
-	gap: 5px;
+	gap: 15px;
 	justify-content: center;
 	top: 50px;
 	margin: 0 auto;
 }
+/* ul들의 부모 */
 .tab.store,
 .tab.community{
 	position: relative;
@@ -43,8 +45,8 @@
 	padding: 0;
 	margin: 0;
 	border: 1px solid white;
-	top: 50px;
-	left: 20px;
+	top: 20px;
+	left: -20px;
 	background: black;
 }
 .tab.community ul{
@@ -54,8 +56,8 @@
 	padding: 0;
 	margin: 0;
 	border: 1px solid white;
-	top: 50px;
-	left: 20px;
+	top: 20px;
+	left: 1px;
 	background: black;
 }
   
@@ -79,6 +81,20 @@
 .tab.login:hover,
 .tab.shopping:hover{
 	font-weight: bold;
+}
+.tab.store.home,
+.tab.store.wishlist,
+.tab.community.home,
+.tab.community.debate{
+	display: inline-block;
+	width: 100%;
+}
+.tab.store.home:hover,
+.tab.store.wishlist:hover,
+.tab.community.home:hover,
+.tab.community.debate:hover{
+	background: #FAFAFA;
+	color: black;
 }
 
 
