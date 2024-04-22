@@ -25,7 +25,7 @@ public class MemberDao {
 			pstmt = conn.prepareStatement(sql);
 			// ? 처리
 			pstmt.setString(1, dto.getMemId());
-			pstmt.setString(1, dto.getMemPwd());
+			pstmt.setString(2, dto.getMemPwd());
 			rs = pstmt.executeQuery();
 			// ResetSet처리
 			if(rs.next()) {
