@@ -43,8 +43,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-[[ ${sssLogin } ]] <br>
-[[ <%=session.getAttribute("sssLogin") %> ]]
 	<header>
 		<div class="top-tab-cullect">
 			<div class="top-tab">

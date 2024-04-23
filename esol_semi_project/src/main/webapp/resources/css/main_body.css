@@ -1,0 +1,58 @@
+.img{
+	width: 100%;
+}
+div.subNav{
+	position: relative;
+	top: 50px;
+	display: flex;
+	width: 80%;
+	max-width: 900px;
+	height: 30px;
+	gap: 40px;
+	justify-content: center;
+	padding: 5px 10px 5px 15px;
+	margin: 0 auto;
+	background: #A9BCF5;
+	flex-shrink: 0;
+}
+.searchSpace{
+	flex: 1px;
+}
+.search{
+	position: relative;
+	top:-3.5px
+}
+div.myStore{
+	cursor: pointer;
+}
+div.myStore:hover div{
+	display: block;
+}
+div.myStore div{
+	top: 15px;
+	display: none;
+	padding: 10px;
+	cursor: pointer;
+	background: #BDBDBD;
+}
+div.category{
+	cursor: pointer;
+}
+.category:hover div{
+	display: block;
+}
+div.category div{
+	top: 15px;
+	display: none;	
+	padding: 10px;
+	cursor: pointer;
+	background: #BDBDBD;
+}
+div.pointStore{
+	cursor: pointer;
+
+}
+div.category div:hover {
+	background: black;
+	color: white;
+}

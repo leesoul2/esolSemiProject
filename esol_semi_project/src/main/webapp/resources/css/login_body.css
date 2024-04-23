@@ -11,3 +11,7 @@ body{
 	padding: 20px;
 	background: black;
 }
+.btn.submit{
+	border: 1px solid black;
+	background: #2E9AFE;
+}

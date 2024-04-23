@@ -26,7 +26,11 @@ public class LogoutController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("WEB-INF/views/logout.jsp").forward(request, response);
+		System.out.println("/logout doPost");
+		//로그아웃
+		request.getSession().removeAttribute("sssLogin");
+		response.sendRedirect(request.getContextPath()+"/main");
+	
 	}
 
 
