@@ -1,5 +1,6 @@
 .img{
 	width: 100%;
+	height: auo;
 }
 div.subNav{
 	position: relative;
@@ -48,6 +49,7 @@ div.category div{
 	cursor: pointer;
 	background: #BDBDBD;
 }
+
 div.pointStore{
 	cursor: pointer;
 
@@ -55,4 +57,25 @@ div.pointStore{
 div.category div:hover {
 	background: black;
 	color: white;
+}
+.carousel{
+	width: 85%;
+	margin: 0 auto;
+}
+article{
+	margin-top: 20px;
+}
+div .carousel-item.active{
+	display: flex;
+	gap: 10px;
+}
+div .carousel-item.active img{
+	max-height: 250px;
+}
+div .carousel-item{
+	display: flex;
+	gap: 10px;
+}
+div .carousel-item img{
+	max-height: 250px;
 }
