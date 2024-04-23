@@ -1,7 +1,6 @@
 package kh.mclass.jdbc.common;
 
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,7 +17,7 @@ public class JdbcTemplate {
 		Properties prop = new Properties();
 		try {
 			String currentPath = JdbcTemplate.class.getResource("./").getPath(); 
-			prop.load(new FileReader(currentPath+"driver.properties"));
+			prop.load(new FileReader(currentPath+"driver_delete.properties"));
 			Class.forName(prop.getProperty("jdbc.driver"));
 			if(isLocalhost) {
 				conn = DriverManager.getConnection(prop.getProperty("jdbc.semi.dbserver.url")
