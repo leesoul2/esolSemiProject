@@ -57,9 +57,9 @@
 		<div class="game-info-list">
 			<div class="game-info">
 				<div class="game-img"><img alt="" src=""></div>
-				<div class="game-title">${ gameTitle }</div>
-				<div class="game-price">${ gamePrice }</div>
-				<div class="game-tag">${ gameTag }</div>
+				<div class="game-title">${ games }</div>
+				<div class="game-price">${ games }</div>
+				<div class="game-tag">${ games }</div>
 			</div>
 		</div>
 		</div>

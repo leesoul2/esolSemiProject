@@ -86,7 +86,7 @@
     <div class="carousel-item active" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -100,7 +100,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -114,7 +114,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -128,7 +128,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -142,7 +142,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -156,7 +156,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -170,7 +170,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -184,7 +184,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -198,7 +198,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -212,7 +212,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -226,7 +226,7 @@
     <div class="carousel-item" data-bs-interval="5000">
       <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
       <div class="info">
-        <div class="titler">게임 타이틀</div>
+        <div class="titler">${ gameTitle }</div>
         <div class="screenshots">
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
           <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
@@ -237,6 +237,7 @@
         </div>
       </div>
     </div>
+</div>
 </div>
 
 </article>
@@ -313,7 +314,7 @@ function loadedHandler(){
 	$(".sports").on("click", sportsClickHandler);
 }
 function navPointStoreClickHandler(){
-	location.href="${pageContext.request.contextPath }/pointStore";
+	window.location.href ="${pageContext.request.contextPath}/pointStore";
 }
 function actionClickHandler(){
 	location.href="${pageContext.request.contextPath }/action";
