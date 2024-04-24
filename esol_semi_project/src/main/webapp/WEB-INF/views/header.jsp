@@ -111,7 +111,7 @@ function tabStoreWishlistClickHandler(){
 	window.location.href ="${pageContext.request.contextPath}/wishlist";
 }
 function tabcommunityHomeClickHandler(){
-	location.href="${pageContext.request.contextPath}/community/home";
+	location.href="${pageContext.request.contextPath}/home";
 }
 function tabLogoutClickHandler(){
 alert("로그아웃되었습니다.");

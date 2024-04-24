@@ -79,3 +79,13 @@ div .carousel-item{
 div .carousel-item img{
 	max-height: 250px;
 }
+div.screenshots{
+	display: flex;
+	width: 400px;
+}
+div.screenshots div{
+	margin: 4px;
+}
+#carouselExampleIndicators{
+	width: 800px;
+}

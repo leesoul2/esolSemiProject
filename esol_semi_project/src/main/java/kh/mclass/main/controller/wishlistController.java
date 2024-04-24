@@ -7,8 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kh.mclass.member.model.dto.MemberInfoDto;
+import kh.mclass.member.model.dto.MemberLoginDto;
+import kh.mclass.member.model.service.MemberService;
+
 /**
- * Servlet implementation class wishlistController
+ * Servlet implementation class CommunityHomeController
  */
 @WebServlet("/wishlist")
 public class wishlistController extends HttpServlet {
@@ -26,6 +30,7 @@ public class wishlistController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		request.getRequestDispatcher("WEB-INF/views/store/wishlist.jsp").forward(request, response);
 	}
 
@@ -33,8 +38,7 @@ public class wishlistController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
 	}
 
 }

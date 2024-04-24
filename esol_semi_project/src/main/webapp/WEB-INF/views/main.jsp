@@ -50,12 +50,12 @@
 		</div>
 		<div class="category">카테고리
 			<div>장르</div>
-			<div>액션</div>
-			<div>롤플레잉</div>
-			<div>전략</div>
-			<div>어드벤처</div>
-			<div>시뮬레이션</div>
-			<div>스포츠</div>
+			<div class="action">액션</div>
+			<div class="rp">롤플레잉</div>
+			<div class="strategy">전략</div>
+			<div class="adventure">어드벤처</div>
+			<div class="simulator">시뮬레이션</div>
+			<div class="sports">스포츠</div>
 		</div>
 		<div class="pointStore">포인트 상점</div>
 		<div class="searchSpace"></div>
@@ -67,70 +67,178 @@
 <section>
 <article>
 	<div>특집 및 추천 제품</div>
-	<div id="carouselExampleIndicators" class="carousel slide"  data-bs-ride="carousel">
-  <div class="carousel-indicators">
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel">
-	<div class="carousel-inner">
+  <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item active" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="https://dummyimage.com/500x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://dummyimage.com/300x200/5d5d70/fff" class="d-block w-100" alt="...">
+      <div class="info">
+        <div class="titler">게임 타이틀</div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+        <div class="screenshots">
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+          <div><img src="https://dummyimage.com/162x69/000000/fff" class="d-block w-100" alt="..."></div>
+        </div>
+      </div>
+    </div>
 </div>
-  </div>
+
 </article>
 <article>
 <div>카테고리별로 살펴보기</div>
@@ -180,7 +288,14 @@
     </ul>
   </div>
   <div class="card-body">
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="game-info-list">
+			<div class="game-info">
+				<div class="game-img"><img alt="" src=""></div>
+				<div class="game-title">${ gameTitle }</div>
+				<div class="game-price">${ gamePrice }</div>
+				<div class="game-tag">${ gameTag }</div>
+			</div>
+		</div>
   </div>
 </div>
 	</div>
@@ -190,9 +305,33 @@
 $(loadedHandler);
 function loadedHandler(){
 	$(".pointStore").on("click", navPointStoreClickHandler);
+	$(".action").on("click", actionClickHandler);
+	$(".rp").on("click", rolePlayingClickHandler);
+	$(".strategy").on("click", strategyClickHandler);
+	$(".adventure").on("click", adventureClickHandler);
+	$(".simulator").on("click", simulatorClickHandler);
+	$(".sports").on("click", sportsClickHandler);
 }
 function navPointStoreClickHandler(){
-	location.href="{pageContext.request.contextPath }/pointStore";
+	location.href="${pageContext.request.contextPath }/pointStore";
+}
+function actionClickHandler(){
+	location.href="${pageContext.request.contextPath }/action";
+}
+function rolePlayingClickHandler(){
+	location.href="${pageContext.request.contextPath }/rolePlaying";
+}
+function strategyClickHandler(){
+	location.href="${pageContext.request.contextPath }/strategy";
+}
+function adventureClickHandler(){
+	location.href="${pageContext.request.contextPath }/adventure";
+}
+function simulatorClickHandler(){
+	location.href="${pageContext.request.contextPath }/simulator";
+}
+function sportsClickHandler(){
+	location.href="${pageContext.request.contextPath }/sports";
 }
 </script>
 
