@@ -296,7 +296,6 @@ ${ gameInfoList }
 			<!-- 	private String gameTitle;
 					private int gamePrice;
 					private String gameTag; -->
-				<div class="game-img"><img alt="" src=""></div>
 				<div>${ gameInfo.gameTitle }</div>
 				<div>${ gameInfo.gamePrice }</div>
 				<div>${ gameInfo.gameTag }</div>
