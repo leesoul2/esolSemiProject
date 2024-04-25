@@ -42,6 +42,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
+${ gameInfoList }
 <div>
 	<div class="nav">
 	<div class="subNav">
@@ -290,10 +291,16 @@
   <div class="card-body">
     <div class="game-info-list">
 			<div class="game-info">
+			
+			<c:forEach var="gameInfo" items="${ gameInfoList }">
+			<!-- 	private String gameTitle;
+					private int gamePrice;
+					private String gameTag; -->
 				<div class="game-img"><img alt="" src=""></div>
-				<div class="game-title">${ gameTitle }</div>
-				<div class="game-price">${ gamePrice }</div>
-				<div class="game-tag">${ gameTag }</div>
+				<div>${ gameInfo.gameTitle }</div>
+				<div>${ gameInfo.gamePrice }</div>
+				<div>${ gameInfo.gameTag }</div>
+			</c:forEach>
 			</div>
 		</div>
   </div>

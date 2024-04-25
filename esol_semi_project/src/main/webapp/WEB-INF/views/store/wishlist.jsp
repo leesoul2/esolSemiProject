@@ -56,6 +56,9 @@
 		</div>
 		<div class="game-info-list">
 			<div class="game-info">
+					<!-- private String gameTitle;
+					private int gamePrice;
+					private String gameTag; -->
 				<div class="game-img"><img alt="" src=""></div>
 				<div class="game-title">${ gameTitle }</div>
 				<div class="game-price">${ gamePrice }</div>
