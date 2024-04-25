@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="gameMapper">
-  	<resultMap type="GameInfoDto" id="GameInfoDtoResultMap">
-  		<result column="GAME_TITLE" property="gameTitle"/>
-  		<result column="GAME_PRICE" property="gamePrice"/>
-  		<result column="GAME_TAG" property="gameTag"/>
-  	</resultMap>
-  	<select id="gameInfo" resultMap="GameInfoDtoResultMap">
-  		select  GAME_TITLE, GAME_PRICE, GAME_TAG from game;
-  	</select>
-  </mapper>
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gameMapper">
+    <resultMap type="kh.mclass.game.dto.GameInfoDto" id="GameInfoDtoResultMap">
+        <result column="GAME_TITLE" property="gameTitle"/>
+        <result column="GAME_PRICE" property="gamePrice"/>
+        <result column="GAME_TAG" property="gameTag"/>
+    </resultMap>
+    <select id="gameInfo" resultMap="GameInfoDtoResultMap">
+        select  GAME_TITLE as gameTitle, 
+		    GAME_PRICE as gamePrice, 
+		    GAME_TAG as gameTag
+		from game
+    </select>
+</mapper>

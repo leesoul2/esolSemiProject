@@ -11,11 +11,7 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias type="kh.mclass.semim.board.model.dto.BoardListDto" alias="BoardListDto"/>
-		<typeAlias type="kh.mclass.semim.board.model.dto.BoardReadDto" alias="BoardReadDto"/>
-		<typeAlias type="kh.mclass.semim.board.model.dto.BoardReplyDto" alias="BoardReplyDto"/>
-		<typeAlias type="kh.mclass.semim.board.model.dto.BoardInsertDto" alias="BoardInsertDto"/>
-	
+		<typeAlias type="kh.mclass.game.model.dto.GameInfoDto" alias="GameInfoDto"/>
 	</typeAliases>
 	
 	<environments default="semimmDBServer">
@@ -39,13 +35,9 @@
 		</environment>
 
 	</environments>
-	
 	<mappers>
-		<mapper resource="mappers/board-mapper.xml"/>
-		<!-- xxx-mapper.xml 파일 생성 후 추가 -->
-	
+		<mapper resource="mappers/game-mappers.xml"/>
 	</mappers>
-
 
 
 

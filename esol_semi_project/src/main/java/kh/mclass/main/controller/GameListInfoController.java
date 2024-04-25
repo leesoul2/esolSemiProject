@@ -15,7 +15,7 @@ import kh.mclass.game.model.service.GameService;
 /**
  * Servlet implementation class GameListInfoController
  */
-@WebServlet("/main")
+@WebServlet("/game")
 public class GameListInfoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,10 +31,7 @@ public class GameListInfoController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		GameService gameService = new GameService();
-		List<GameInfoDto> gameInfoList = gameService.gameInfo();
-		request.setAttribute("gameInfoList", gameInfoList);
-		request.getRequestDispatcher("/WEB-INF/views/main.jsp").forward(request, response);
+		
 	}
 
 	/**

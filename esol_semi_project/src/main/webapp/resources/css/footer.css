@@ -1,0 +1,15 @@
+.footer{
+	background: gray;
+}
+.footer-topRow-lower{
+	display: flex;
+	gap: 5px;	
+	cursor: pointer;
+	background: gray;
+}
+.footer-bottomRow a{
+	color: black;
+	text-decoration: none;
+	padding: 0 20px;
+	border-right: 1px solid black;
+}

@@ -10,7 +10,8 @@ import kh.mclass.game.model.dto.GameInfoDto;
 public class GameDao {
 	
 	public List<GameInfoDto> gameInfo(SqlSession session){
-		return session.selectList("gameMapper.gameInfo");
-		
+		List<GameInfoDto> gameInfoList = session.selectList("gameMapper.gameInfo");
+		System.out.println("dao의 gameInfoList"+gameInfoList);
+		return gameInfoList;
 	}
 }

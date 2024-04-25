@@ -89,3 +89,33 @@ div.screenshots div{
 #carouselExampleIndicators{
 	width: 800px;
 }
+div.carouselTitle{
+	margin-bottom: 10px;
+}
+div.loginRecommended{
+	display: flex;
+	background: black;
+}
+div .subLoginRecommended{
+	padding: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+div .subLoginRecommended div{
+	padding: 10px;
+	color: #6E6E6E;
+	font-size: 15px;
+}
+div .subLoginRecommended h1{
+	color: #0174DF;
+	font-size: 20px;
+}
+button.tab.login{
+	padding: 10px;
+	border-radius: 10px;
+	background: green;
+}
+div .subLoginRecommended a{
+	text-decoration: none;
+	color: white;
+}

@@ -42,7 +42,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-${ gameInfoList }
+${gameInfoList}
+[[${gameInfoList}]]
 <div>
 	<div class="nav">
 	<div class="subNav">
@@ -67,7 +68,7 @@ ${ gameInfoList }
 	</div>
 <section>
 <article>
-	<div>특집 및 추천 제품</div>
+	<div class="carouselTitle">특집 및 추천 제품</div>
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -243,7 +244,7 @@ ${ gameInfoList }
 
 </article>
 <article>
-<div>카테고리별로 살펴보기</div>
+<div class="carouselTitle">카테고리별로 살펴보기</div>
 <div id="carouselExampleIndicator" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicator" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -292,15 +293,17 @@ ${ gameInfoList }
   <div class="card-body">
     <div class="game-info-list">
 			<div class="game-info">
-			
-			<c:forEach var="gameInfo" items="${ gameInfoList }">
-			<!-- 	private String gameTitle;
-					private int gamePrice;
-					private String gameTag; -->
-				<div>${ gameInfo.gameTitle }</div>
-				<div>${ gameInfo.gamePrice }</div>
-				<div>${ gameInfo.gameTag }</div>
+			<c:forEach items="${gameInfoList}" var="val">
+			    ${val.gameTitle}<br>
+			    ${val.gamePrice}<br>
+			    ${val.gameTag}<br>
 			</c:forEach>
+
+			<c:if test="${empty gameInfoList}">
+			    등록된 게임이 없습니다.
+			    console.log(${gameInfoList});
+			</c:if>
+
 			</div>
 		</div>
   </div>
@@ -308,9 +311,22 @@ ${ gameInfoList }
 	</div>
 </article>
   	</section>
+  	<c:if test="${empty sssLogin}">
+  	<div class="loginRecommended">
+  		<div class="subLoginRecommended">
+			<div><h1>추천 제품을 찾고 계신가요?</h1></div>
+			<div>맞춤 추천 제품을 보려면 로그인하세요.</div>
+			<div><button type="button" class="tab login" onclick="tabLoginClickHandler()">로그인</button></div>
+			<div>아직 가입하지 않으셨다면 먼저 <a href="/esol_semi_project/join">가입</a>하신 후 무료로 steam을 이용하세요.</div>
+	  		
+  		</div>
+  	</div>
+	</c:if>
+<%@ include file="footer.jsp" %>
 <script>
 $(loadedHandler);
 function loadedHandler(){
+	$(".tab.login").on("click", tabLoginClickHandler);
 	$(".pointStore").on("click", navPointStoreClickHandler);
 	$(".action").on("click", actionClickHandler);
 	$(".rp").on("click", rolePlayingClickHandler);
@@ -339,6 +355,9 @@ function simulatorClickHandler(){
 }
 function sportsClickHandler(){
 	location.href="${pageContext.request.contextPath }/sports";
+}
+function tabLoginClickHandler(){
+	location.href="${pageContext.request.contextPath}/login";
 }
 </script>
 

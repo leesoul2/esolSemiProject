@@ -9,14 +9,11 @@ import kh.mclass.game.model.dao.GameDao;
 import kh.mclass.game.model.dto.GameInfoDto;
 
 public class GameService {
-	GameDao dao = new GameDao();
-	public List<GameInfoDto> gameInfo(){
-		List<GameInfoDto> result = null;
-		SqlSession session = getSqlSession(true);
-		result = dao.gameInfo(session);
-		session.commit();
-		session.rollback();
-		return result;
-	}
-		
+    GameDao dao = new GameDao();
+
+    public List<GameInfoDto> gameInfo(){
+        try(SqlSession session = getSqlSession()){
+        return dao.gameInfo(session);
+        }
+    }
 }

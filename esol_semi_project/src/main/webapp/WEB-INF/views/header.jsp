@@ -83,7 +83,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="tab library" onclick="tabLibraryClickHandler()">라이브러리</div>
+					<div class="tab information" onclick="tabInformationClickHandler()">정보</div>
 					<div class="tab support" onclick="tabSupportClickHandler()">지원</div>
 				</div>
 			</div>
@@ -99,6 +99,8 @@ function loaedHandler(){
 	$(".tab.store.home").on("click", tabStoreHomeClickHandler);
 	$(".tab.store.wishlist").on("click", tabStoreWishlistClickHandler);
 	$(".tab.community.home").on("click", tabcommunityHomeClickHandler);
+	$(".tab.information").on("click", tabInformationClickHandler);
+	$(".tab.support").on("click", tabSupportClickHandler);
 }
 
 function tabLoginClickHandler(){
@@ -112,6 +114,12 @@ function tabStoreWishlistClickHandler(){
 }
 function tabcommunityHomeClickHandler(){
 	location.href="${pageContext.request.contextPath}/home";
+}
+function tabInformationClickHandler(){
+	location.href="${pageContext.request.contextPath}/information";
+}
+function tabSupportClickHandler(){
+	location.href="${pageContext.request.contextPath}/support";
 }
 function tabLogoutClickHandler(){
 alert("로그아웃되었습니다.");
