@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class pointStoreController
  */
 @WebServlet("/pointStore")
-public class pointStoreController extends HttpServlet {
+public class PointStoreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public pointStoreController() {
+    public PointStoreController() {
         super();
         // TODO Auto-generated constructor stub
     }
