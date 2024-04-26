@@ -1,15 +1,30 @@
 .footer{
-	background: gray;
+	font-size: 10px;
+	background: #0B173B;
+}
+.footer-topRow{
+	color:#424242;
+	border: 1px solid black;
 }
 .footer-topRow-lower{
 	display: flex;
 	gap: 5px;	
 	cursor: pointer;
-	background: gray;
+}
+.footer-topRow-lower a{
+	color:gray;
+	text-decoration: none;
+}
+.footer-topRow-lower a:hover{
+	color: white;
 }
 .footer-bottomRow a{
-	color: black;
+	color:gray;
 	text-decoration: none;
 	padding: 0 20px;
 	border-right: 1px solid black;
+	cursor: pointer;
+}
+.footer-bottomRow a:hover{
+	color: white;
 }

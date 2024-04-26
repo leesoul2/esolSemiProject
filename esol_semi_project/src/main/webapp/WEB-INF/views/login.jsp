@@ -55,7 +55,6 @@
 <div class="login-form">
 	<h1>로그인</h1>
 	<fieldset>
-	<legend>로그인 ajax</legend>
 	<form id="frm-login">
 		<div>계정으로 로그인</div><input type="text" name="id">
 		<div>비밀번호</div><input type="password" name="pwd">

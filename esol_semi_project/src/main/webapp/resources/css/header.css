@@ -14,7 +14,11 @@
 .tab.store,
 .tab.community,
 .tab.library,
-.tab.support{
+.tab.support
+{
+	cursor: pointer;
+}
+.tab.information{
 	cursor: pointer;
 }
 
@@ -75,13 +79,15 @@
 .tab.store:hover
 ,.tab.community:hover
 ,.tab.library:hover
-,.tab.support:hover{
+,.tab.support:hover
+,.tab.information:hover{
 	font-weight: bold;
 }
 .tab.login:hover,
 .tab.shopping:hover{
 	font-weight: bold;
 }
+
 .tab.store.home,
 .tab.store.wishlist,
 .tab.community.home,

@@ -13,12 +13,12 @@
 			<div class=""><img alt="" src=""></div>
 			<div class="">© 2024 Valve Corporation. All rights reserved. 모든 상표는 미국 및 기타 국가에서 해당하는 소유자의 재산입니다.</div>
 				<div class="footer-topRow-lower">
-					<div class="">부가가치세 포함</div>
-					<div class="">개인정보 보호정책</div>
-					<div class="">사용권</div>
-					<div class="">Steam 이용 약관</div>
-					<div class="">환불</div>
-					<div class="">쿠키</div>
+					<a href="#">부가가치세 포함</a>
+					<a href="#">개인정보 보호정책</a>
+					<a href="#">사용권</a>
+					<a href="#">Steam 이용 약관</a>
+					<a href="#">환불</a>
+					<a href="#">쿠키</a>
 				</div>
 			<div class=""><img alt="" src=""></div>
 		</div>

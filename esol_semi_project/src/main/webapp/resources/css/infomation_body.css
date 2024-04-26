@@ -1,0 +1,35 @@
+div.storeShortcuts a,
+div.communityShortcuts a{
+	text-decoration: none;
+	font-size: 20px;
+}
+h1{
+	font-size: 30px;
+	font-weight: bold;
+}
+.storeShortcuts{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.communityShortcuts{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	left: 0
+}
+
+.steamHardware{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	right: 0	
+}
+
+
+footer{
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

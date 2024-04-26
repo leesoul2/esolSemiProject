@@ -55,7 +55,7 @@
 					</c:if>
 						</form>
 							<div>ㅣ</div>
-							<div class="tab shopping" onclick="tabShoppingClickHandler()">장바구니</div>
+							<div class="tab shopping" onclick="tabShoppingBasketClickHandler()">장바구니</div>
 
 			</div>
 			<div class="tab">
@@ -101,6 +101,7 @@ function loaedHandler(){
 	$(".tab.community.home").on("click", tabcommunityHomeClickHandler);
 	$(".tab.information").on("click", tabInformationClickHandler);
 	$(".tab.support").on("click", tabSupportClickHandler);
+	$(".tab.shopping").on("click", tabShoppingBasketClickHandler);
 }
 
 function tabLoginClickHandler(){
@@ -120,6 +121,9 @@ function tabInformationClickHandler(){
 }
 function tabSupportClickHandler(){
 	location.href="${pageContext.request.contextPath}/support";
+}
+function tabShoppingBasketClickHandler(){
+	location.href="${pageContext.request.contextPath}/shoppingBasket";
 }
 function tabLogoutClickHandler(){
 alert("로그아웃되었습니다.");
