@@ -15,6 +15,7 @@
     <typeAlias type="kh.mclass.game.model.dto.GameDetailInfoDto" alias="GameDetailInfoDto"/>
 </typeAliases>
 
+
 	
 	<environments default="semimmDBServer">
 		<environment id="semimmDBServer">
@@ -39,6 +40,7 @@
 	</environments>
 	<mappers>
 		<mapper resource="mappers/game-mappers.xml"/>
+		<mapper resource="mappers/gameDetail-mappers.xml"/>
 	</mappers>
 
 

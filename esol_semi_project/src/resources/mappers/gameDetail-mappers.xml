@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gameDetailMapper">
+    <resultMap type="kh.mclass.game.model.dto.GameDetailInfoDto" id="GameDetailInfoDtoResultMap">
+        <result column="GAME_TITLE" property="gameTitle"/>
+        <result column="GAME_PRICE" property="gamePrice"/>
+        <result column="GAME_RD" property="gameRd" jdbcType="TIMESTAMP" javaType="oracle.sql.DATE" />
+        <result column="GAME_EXP" property="gameExp"/>
+    </resultMap>
+    <select id="gameDetailInfo" resultMap="GameDetailInfoDtoResultMap">
+        select  GAME_TITLE as gameTitle, 
+		    GAME_PRICE as gamePrice, 
+		    GAME_RD as gameRd,
+		    GAME_EXP as gameExp
+		from game
+    </select>
+
+</mapper>

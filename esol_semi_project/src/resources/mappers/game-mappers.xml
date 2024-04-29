@@ -14,19 +14,5 @@
 		    GAME_TAG as gameTag
 		from game
     </select>
-    <resultMap type="kh.mclass.game.model.dto.GameDetailInfoDto" id="GameDetailInfoDtoResultMap">
-    	<result column="GAME_TITLE" property="gameTitle"/>
-        <result column="GAME_PRICE" property="gamePrice"/>
-        <result column="GAME_TAG" property="gameTag"/>
-        <result column="GAME_EXP" property="gameExp"/>
-        <result column="GAME_RD" property="gameRd"/>
-    </resultMap>
-	<select id="gameDetailInfo" resultMap="GameDetailInfoDtoResultMap">
-		select  GAME_TITLE as gameTitle, 
-		    GAME_PRICE as gamePrice, 
-		    GAME_TAG as gameTag,
-		    GAME_EXP as gameExp,
-		    GAME_RD as gameRd
-		from game
-	</select>
+
 </mapper>

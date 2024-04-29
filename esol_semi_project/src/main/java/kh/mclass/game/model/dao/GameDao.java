@@ -16,7 +16,7 @@ public class GameDao {
     }
     public List<GameDetailInfoDto> gameDetailPageInfo(SqlSession session) {
         try {
-            return session.selectList("gameMapper.gameDetailInfo"); // nameSpace.selectId
+            return session.selectList("gameDetailMapper.gameDetailInfo"); // nameSpace.selectId
         } catch (Exception e) {
             e.printStackTrace();
         }
