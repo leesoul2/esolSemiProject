@@ -11,8 +11,10 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias type="kh.mclass.game.model.dto.GameInfoDto" alias="GameInfoDto"/>
-	</typeAliases>
+    <typeAlias type="kh.mclass.game.model.dto.GameInfoDto" alias="GameInfoDto"/>
+    <typeAlias type="kh.mclass.game.model.dto.GameDetailInfoDto" alias="GameDetailInfoDto"/>
+</typeAliases>
+
 	
 	<environments default="semimmDBServer">
 		<environment id="semimmDBServer">

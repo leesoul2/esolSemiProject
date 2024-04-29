@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="../header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>찜 목록</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<title>Main page</title>
 <!-- [1] 해상도 - 최적해상도1050px 결정 (최대/최소 지원범위-테스트영역) -->
 <!-- [2] content 영역 960px 80vw 90%, 배치(중앙,왼쪽) -->
 <!-- [3] reset.css 검토 -  폴더 경로 확정 -->
@@ -60,10 +60,12 @@
 					<!-- private String gameTitle;
 					private int gamePrice;
 					private String gameTag; -->
-				<div class="game-img"><img alt="" src=""></div>
-				<div class="game-title">${ games }</div>
-				<div class="game-price">${ games }</div>
-				<div class="game-tag">${ games }</div>
+				<c:forEach items="${dto}" var="val">
+			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+			    <div class="price">${val.gamePrice}<br></div>
+			    <div class="title">${val.gameTitle}<br></div>
+			    <div class="tag">${val.gameTag}<br></div>
+			</c:forEach>
 			</div>
 		</div>
 		</div>

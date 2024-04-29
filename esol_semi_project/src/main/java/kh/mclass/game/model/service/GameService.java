@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import kh.mclass.game.model.dao.GameDao;
 import kh.mclass.game.model.dto.GameInfoDto;
+import kh.mclass.game.model.dto.GameDetailInfoDto;
 import kh.mclass.jdbc.common.MybatisTemplate;
 
 public class GameService {
@@ -30,8 +31,34 @@ public class GameService {
 				System.out.println("session close 완료");
 			}
 		}
-        System.out.println("controller로 넘어가기 전service의 dto: "+dto);
         
         return dto;
     }
+    
+    public List<GameDetailInfoDto> gameDetaliInfo(){
+    	SqlSession session = null;
+        List<GameDetailInfoDto> dto = null;
+        
+        try {
+        	session = MybatisTemplate.getSqlSession();
+        	dto = dao.gameDetailPageInfo(session);
+        	System.out.println("session커밋");
+        	session.commit();
+        	System.out.println("dto: "+dto);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("dto: "+dto);
+			System.out.println("session롤백");
+		}finally {
+			if(session != null) {
+				session.close();
+				System.out.println("session close 완료");
+			}
+		}
+        
+        return dto;
+    }
+    
+    
 }

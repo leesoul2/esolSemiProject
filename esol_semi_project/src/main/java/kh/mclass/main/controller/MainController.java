@@ -33,7 +33,6 @@ public class MainController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		GameService servic = new GameService();
 		request.setAttribute("dto", servic.gameInfo());
-		System.out.println("servic.gameInfo()"+servic.gameInfo());
 		request.getRequestDispatcher("WEB-INF/views/main.jsp").forward(request, response);
 	}
 

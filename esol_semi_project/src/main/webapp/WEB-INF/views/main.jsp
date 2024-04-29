@@ -33,6 +33,7 @@
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/main_body.css" rel="stylesheet">
 <!-- section 영역 style -->
+<link href="${pageContext.request.contextPath}/resources/css/main_section.css" rel="stylesheet">
 <!-- footer 영역 style -->
 <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 
@@ -42,8 +43,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
-${gameInfoList}
-[[${gameInfoList}]]
 <div>
 	<div class="nav">
 	<div class="subNav">
@@ -284,24 +283,39 @@ ${gameInfoList}
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#">인기순</a>
+        <a class="nav-link active" aria-current="true" href="#game-info-list">인기순</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">최신순</a>
+        <a class="nav-link" href="#game-info-list-recent">최신순</a>
     </ul>
   </div>
   <div class="card-body">
-    <div class="game-info-list">
-			<div class="game-info">
+    <div id="game-info-list">
+    	<div class="game-info">
 			<c:forEach items="${dto}" var="val">
-			    ${val.gameTitle}<br>
-			    ${val.gamePrice}<br>
-			    ${val.gameTag}<br>
+			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+			    <div class="price">${val.gamePrice}<br></div>
+			    <div class="title">${val.gameTitle}<br></div>
+			    <div class="tag">${val.gameTag}<br></div>
 			</c:forEach>
 
-			<c:if test="${empty gameInfoList}">
+			<c:if test="${empty dto}">
 			    등록된 게임이 없습니다.
-			    console.log(${gameInfoList});
+			</c:if>
+
+			</div>
+		</div>
+		 <div id="game-info-list-recent">
+    	<div class="game-info">
+			<c:forEach items="${dto}" var="val">
+			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+			    <div class="price">${val.gamePrice}<br></div>
+			    <div class="title">${val.gameTitle}<br></div>
+			    <div class="tag">${val.gameTag}<br></div>
+			</c:forEach>
+
+			<c:if test="${empty dto}">
+			    등록된 게임이 없습니다.
 			</c:if>
 
 			</div>
