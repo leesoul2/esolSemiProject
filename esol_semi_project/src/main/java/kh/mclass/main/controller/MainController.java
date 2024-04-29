@@ -31,11 +31,10 @@ public class MainController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		GameService gameService = new GameService();
-		List<GameInfoDto> gameInfoList = gameService.gameInfo();
-		request.setAttribute("gameInfoList", gameInfoList);
+		GameService servic = new GameService();
+		request.setAttribute("dto", servic.gameInfo());
+		System.out.println("servic.gameInfo()"+servic.gameInfo());
 		request.getRequestDispatcher("WEB-INF/views/main.jsp").forward(request, response);
-		System.out.println("현재 게임인포리스트 상태:"+gameInfoList);
 	}
 
 }

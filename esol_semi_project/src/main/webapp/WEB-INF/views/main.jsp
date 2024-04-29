@@ -293,7 +293,7 @@ ${gameInfoList}
   <div class="card-body">
     <div class="game-info-list">
 			<div class="game-info">
-			<c:forEach items="${gameInfoList}" var="val">
+			<c:forEach items="${dto}" var="val">
 			    ${val.gameTitle}<br>
 			    ${val.gamePrice}<br>
 			    ${val.gameTag}<br>

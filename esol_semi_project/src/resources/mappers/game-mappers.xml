@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="gameMapper">
-    <resultMap type="kh.mclass.game.dto.GameInfoDto" id="GameInfoDtoResultMap">
+    <resultMap type="kh.mclass.game.model.dto.GameInfoDto" id="GameInfoDtoResultMap">
         <result column="GAME_TITLE" property="gameTitle"/>
         <result column="GAME_PRICE" property="gamePrice"/>
         <result column="GAME_TAG" property="gameTag"/>

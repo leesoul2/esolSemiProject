@@ -13,9 +13,9 @@ import javax.websocket.Session;
 
 import org.apache.ibatis.session.SqlSession;
 
-import kh.mclass.game.dao.GameDao;
-import kh.mclass.game.dto.GameInfoDto;
-import kh.mclass.game.service.GameService;
+import kh.mclass.game.model.dao.GameDao;
+import kh.mclass.game.model.dto.GameInfoDto;
+import kh.mclass.game.model.service.GameService;
 import kh.mclass.member.model.dto.MemberInfoDto;
 import kh.mclass.member.model.dto.MemberLoginDto;
 import kh.mclass.member.model.service.MemberService;
@@ -39,10 +39,11 @@ public class wishlistController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	GameService servic = new GameService();
+    	
     	request.getRequestDispatcher("WEB-INF/views/store/wishlist.jsp").forward(request, response);
-    	        List<GameInfoDto> games = new GameService().selectAllGameListInfo();
-        request.setAttribute("games", games);
-
+    	request.setAttribute("dto", servic.gameInfo());
+		System.out.println("servic.gameInfo()"+servic.gameInfo());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/wishlist.jsp");
         dispatcher.forward(request, response);
     }
