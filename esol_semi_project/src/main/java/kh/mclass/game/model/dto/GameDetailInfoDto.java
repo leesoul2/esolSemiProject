@@ -1,18 +1,18 @@
 package kh.mclass.game.model.dto;
 
-import oracle.sql.DATE;
+import java.sql.Timestamp;
 
 public class GameDetailInfoDto {
 	private String gameTitle;
 	private String gameExp;
 	private int gamePrice;
-	private DATE gameRd;
+	private Timestamp gameRd;
 	@Override
 	public String toString() {
 		return "gameDetailInfoDto [gameTitle=" + gameTitle + ", gameExp=" + gameExp + ", gamePrice=" + gamePrice
 				+ ", gameRd=" + gameRd + "]";
 	}
-	public GameDetailInfoDto(String gameTitle, String gameExp, int gamePrice, DATE gameRd, String gameTag) {
+	public GameDetailInfoDto(String gameTitle, String gameExp, int gamePrice, Timestamp gameRd, String gameTag) {
 		super();
 		this.gameTitle = gameTitle;
 		this.gameExp = gameExp;
@@ -28,7 +28,7 @@ public class GameDetailInfoDto {
 	public int getGamePrice() {
 		return gamePrice;
 	}
-	public DATE getGameRd() {
+	public Timestamp getGameRd() {
 		return gameRd;
 	}
 	

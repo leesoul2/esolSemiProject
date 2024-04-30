@@ -29,9 +29,6 @@ public class gameDetailController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		GameService servic = new GameService();
-		request.setAttribute("detailInfo", servic.gameDetaliInfo());
-		System.out.println("servic.gameDetaliInfo(): "+servic.gameDetaliInfo());
 		request.getRequestDispatcher("WEB-INF/views/store/gameDetail.jsp").forward(request, response);
 	}
 

@@ -7,10 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kh.mclass.board.model.Service.BoardService;
+
 /**
  * Servlet implementation class CommunityHomeController
  */
-@WebServlet("/home")
+@WebServlet("/communityHome")
 public class CommunityHomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,8 +28,9 @@ public class CommunityHomeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		request.getRequestDispatcher("WEB-INF/views/community/home.jsp").forward(request, response);
+		BoardService service = new BoardService();
+		request.setAttribute("board", service.selectBoardList());
+		request.getRequestDispatcher("WEB-INF/views/community/communityHome.jsp").forward(request, response);
 	}
 
 	/**

@@ -2,6 +2,9 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- private String gameTitle;
+	private int gamePrice;
+	private String gameTag; -->
 <mapper namespace="gameMapper">
     <resultMap type="kh.mclass.game.model.dto.GameInfoDto" id="GameInfoDtoResultMap">
         <result column="GAME_TITLE" property="gameTitle"/>
@@ -9,10 +12,10 @@
         <result column="GAME_TAG" property="gameTag"/>
     </resultMap>
     <select id="gameInfo" resultMap="GameInfoDtoResultMap">
-        select  GAME_TITLE as gameTitle, 
-		    GAME_PRICE as gamePrice, 
-		    GAME_TAG as gameTag
-		from game
+      select GAME_TITLE as gameTitle,
+      		GAME_PRICE as gamePrice,
+      		GAME_TAG as gameTag
+      from game
     </select>
 
 </mapper>

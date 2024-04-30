@@ -19,7 +19,9 @@ public class MybatisTemplate {
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 			session = sqlSessionFactory.openSession(true);    // 매개인자 없으면 true 기본
+			System.out.println("연결성공");
 		} catch (IOException e) {
+			System.out.println("연결실패");
 			e.printStackTrace();
 		}
 		return session;

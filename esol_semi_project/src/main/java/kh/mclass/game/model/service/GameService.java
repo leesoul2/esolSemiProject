@@ -19,12 +19,16 @@ public class GameService {
         try {
         	session = MybatisTemplate.getSqlSession();
         	dto = dao.gameListInfo(session);
-        	System.out.println("session커밋");
+        	System.out.println("servic에서 "+dto);
         	session.commit();
+        	System.out.println("session커밋완료");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("session롤백");
+			if(session != null) {
+				session.rollback();
+				System.out.println("session롤백");
+			}
 		}finally {
 			if(session != null) {
 				session.close();
