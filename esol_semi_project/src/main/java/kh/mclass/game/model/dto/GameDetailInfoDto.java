@@ -6,18 +6,18 @@ public class GameDetailInfoDto {
 	private String gameTitle;
 	private String gameExp;
 	private int gamePrice;
-	private Timestamp gameRd;
+	private int gameTag;
 	@Override
 	public String toString() {
-		return "gameDetailInfoDto [gameTitle=" + gameTitle + ", gameExp=" + gameExp + ", gamePrice=" + gamePrice
-				+ ", gameRd=" + gameRd + "]";
+		return "GameDetailInfoDto [gameTitle=" + gameTitle + ", gameExp=" + gameExp + ", gamePrice=" + gamePrice
+				+ ", gameTag=" + gameTag + "]";
 	}
-	public GameDetailInfoDto(String gameTitle, String gameExp, int gamePrice, Timestamp gameRd, String gameTag) {
+	public GameDetailInfoDto(String gameTitle, String gameExp, int gamePrice, int gameTag) {
 		super();
 		this.gameTitle = gameTitle;
 		this.gameExp = gameExp;
 		this.gamePrice = gamePrice;
-		this.gameRd = gameRd;
+		this.gameTag = gameTag;
 	}
 	public String getGameTitle() {
 		return gameTitle;
@@ -28,8 +28,8 @@ public class GameDetailInfoDto {
 	public int getGamePrice() {
 		return gamePrice;
 	}
-	public Timestamp getGameRd() {
-		return gameRd;
+	public int getGameTag() {
+		return gameTag;
 	}
 	
 	

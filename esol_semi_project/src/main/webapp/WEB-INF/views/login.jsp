@@ -32,36 +32,24 @@
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 
 <!-- body 영역 style -->
-<link href="${pageContext.request.contextPath}/resources/css/login_body.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/loginBody.css" rel="stylesheet">
 <!-- footer 영역 style -->
 <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 
 
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<style>
-.btn.submit{
-	border: 1px solid black;
-	background: #2E9AFE;
-}
-</style>
 </head>
 <body>
 <div class="login-form">
 	<h1>로그인</h1>
 	<fieldset>
 	<form id="frm-login">
-		<div>계정으로 로그인</div><input type="text" name="id">
+		<div>계정으로 로그인</div><input type="text" name="id" class="inp id">
 		<div>비밀번호</div><input type="password" name="pwd">
 		<div><input type="button" value="로그인" class="btn submit"></div>
 	</form>
 </fieldset> 
-	<div><input type="button" value="가입" class="btn join"></div>
 </div>
 
 <script>
@@ -136,4 +124,14 @@ function frmClickHandler(){
 
 
 </body>
+<footer>
+<div class="footerJoinExplanation">
+	<div class="joinExplanation">
+		<div class="firstJoin">Steam에 처음 오셨나요?</div>
+		<div>무료로 쉽게 가입할 수 있습니다. 수천 종류의 게<br>임을 전 세계 새로운 친구들과 힘께 즐겨보세요.</div>
+	</div>
+	<div><input type="button" value="가입하기" class="btn join"></div>
+</div>
+<%@ include file="footer.jsp" %>
+</footer>
 </html>

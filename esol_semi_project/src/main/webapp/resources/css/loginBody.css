@@ -1,0 +1,59 @@
+body{
+	color: white;
+}
+h1{
+	font-size: 20px;
+	margin-bottom: 70px;
+	font-weight: bold;
+}
+.login-form{
+	position: relative;
+	top: 40px;
+	width:20%;
+	margin:0 auto;
+	}
+#frm-login{
+	color: white;
+	width: 90%;
+	padding: 20px;
+	background: black;
+}
+.btn.submit{
+	border: 1px solid black;
+	background: blue;
+	margin-top: 10px;
+	margin-left: 30px;
+	padding: 5px 30px;
+	cursor: pointer;
+}
+.btn.join{
+	position: relative;
+	top: 80px;
+	left: 540px;
+	padding: 10px;
+	cursor: pointer;
+}
+.inp.id{
+	margin-bottom: 10px;
+}
+footer{
+	position: relative;
+	top: 240px;
+	max-height: 600px;
+}
+div.footerJoinExplanation{
+	background: #0B173B;
+	height: 500px;
+}
+div.footerJoinExplanation div{
+	position: relative;
+	top: 70px;
+}
+div.joinExplanation{
+	display: flex;
+	gap:100px;
+	justify-content: center;
+}
+div.firstJoin{
+	font-weight: bold;
+}

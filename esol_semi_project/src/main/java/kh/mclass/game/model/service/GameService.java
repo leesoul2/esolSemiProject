@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import kh.mclass.game.model.dao.GameDao;
 import kh.mclass.game.model.dto.GameInfoDto;
+import kh.mclass.game.model.dto.GameListInfoLatestDto;
 import kh.mclass.game.model.dto.GameDetailInfoDto;
 import kh.mclass.jdbc.common.MybatisTemplate;
 
@@ -63,6 +64,30 @@ public class GameService {
         
         return dto;
     }
+//    public List<GameListInfoLatestDto> gameLatest(){
+//    	SqlSession session = null;
+//        List<GameListInfoLatestDto> dto = null;
+//        
+//        try {
+//        	session = MybatisTemplate.getSqlSession();
+//        	dto = dao.gameLatest(session);
+//        	System.out.println("session커밋");
+//        	session.commit();
+//        	System.out.println("dto: "+dto);
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("dto: "+dto);
+//			System.out.println("session롤백");
+//		}finally {
+//			if(session != null) {
+//				session.close();
+//				System.out.println("session close 완료");
+//			}
+//		}
+//        
+//        return dto;
+//    }
     
     
 }

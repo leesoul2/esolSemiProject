@@ -15,9 +15,6 @@
     <typeAlias type="kh.mclass.game.model.dto.GameDetailInfoDto" alias="GameDetailInfoDto"/>
     <typeAlias type="kh.mclass.board.model.dto.BoardListInfoDto" alias="BoardListInfoDto"/>
 </typeAliases>
-<typeHandlers>
-	<typeHandler javaType="java.sql.Timestamp" handler="org.apache.ibatis.type.DateTypeHandler"/>
-</typeHandlers>
 
 
 

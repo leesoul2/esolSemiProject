@@ -5,15 +5,15 @@
 <mapper namespace="gameDetailMapper">
     <resultMap type="kh.mclass.game.model.dto.GameDetailInfoDto" id="GameDetailInfoDtoResultMap">
         <result column="GAME_TITLE" property="gameTitle"/>
-        <result column="GAME_PRICE" property="gamePrice"/>
-        <result column="GAME_RD" property="gameRd" javaType="java.sql.Timestamp"  typeHandler="org.apache.ibatis.type.DateTypeHandler"/>
         <result column="GAME_EXP" property="gameExp"/>
+        <result column="GAME_PRICE" property="gamePrice"/>
+        <result column="GAME_TAG" property="gameTag"/>
     </resultMap>
     <select id="gameDetailInfo" resultMap="GameDetailInfoDtoResultMap">
         select  GAME_TITLE as gameTitle, 
+		    GAME_EXP as gameExp,
 		    GAME_PRICE as gamePrice, 
-		    GAME_RD as gameRd,
-		    GAME_EXP as gameExp
+		    GAME_TAG as gameTag 
 		from game
     </select>
 </mapper>

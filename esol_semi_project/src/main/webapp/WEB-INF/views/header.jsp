@@ -31,15 +31,9 @@
 
 <!-- body 영역 style -->
 <!-- footer 영역 style -->
-<link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 
 
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 <body>
@@ -114,7 +108,7 @@ function tabStoreWishlistClickHandler(){
 	window.location.href ="${pageContext.request.contextPath}/wishlist";
 }
 function tabcommunityHomeClickHandler(){
-	location.href="${pageContext.request.contextPath}/home";
+	location.href="${pageContext.request.contextPath}/communityHome";
 }
 function tabInformationClickHandler(){
 	location.href="${pageContext.request.contextPath}/information";

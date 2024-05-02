@@ -41,11 +41,12 @@ public class wishlistController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	GameService servic = new GameService();
     	
-    	request.getRequestDispatcher("WEB-INF/views/store/wishlist.jsp").forward(request, response);
+    	
     	request.setAttribute("dto", servic.gameInfo());
 		System.out.println("servic.gameInfo()"+servic.gameInfo());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/wishlist.jsp");
-        dispatcher.forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/store/wishlist.jsp").forward(request, response);
+		return;
+        
     }
 
 

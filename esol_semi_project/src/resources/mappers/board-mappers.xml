@@ -11,7 +11,7 @@
         <result column="REC_COUNT" property="recCount"/>
         <result column="EXPRESSION_COUNT" property="expressionCount"/>
     </resultMap>
-    <select id="boardInfo" resultMap="BoardListInfoDtoResultMap">
+    <select id="boardInfo" parameterType="kh.mclass.board.model.dto.BoardListInfoDto" resultMap="BoardListInfoDtoResultMap">
         select  BOARD_TITLE as boardTitle, 
 		    BOARD_DETAIL as boardDetail, 
 		    COMMENT_COUNT as commentCount,
@@ -20,5 +20,5 @@
 		    EXPRESSION_COUNT as expressionCount
 		from board
     </select>
-
 </mapper>
+

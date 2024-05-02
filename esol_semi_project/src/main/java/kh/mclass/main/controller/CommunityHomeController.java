@@ -29,16 +29,11 @@ public class CommunityHomeController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		BoardService service = new BoardService();
+		
 		request.setAttribute("board", service.selectBoardList());
+		System.out.println("board"+service.selectBoardList());
 		request.getRequestDispatcher("WEB-INF/views/community/communityHome.jsp").forward(request, response);
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		return;
 	}
 
 }

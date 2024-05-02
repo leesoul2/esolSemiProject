@@ -32,6 +32,7 @@
 <!-- header 영역 style -->
 <link href="${pageContext.request.contextPath}/resources/css/layout.css" rel="stylesheet">
 <!-- section 영역 style -->
+<link href="${pageContext.request.contextPath}/resources/css/wishlist_body.css" rel="stylesheet">
 <!-- footer 영역 style -->
 <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 
@@ -61,10 +62,12 @@
 					private int gamePrice;
 					private String gameTag; -->
 				<c:forEach items="${dto}" var="val">
-			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+				<div class="game-info-sub">
+					<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
 			    <div class="price">${val.gamePrice}<br></div>
 			    <div class="title">${val.gameTitle}<br></div>
 			    <div class="tag">${val.gameTag}<br></div>
+				</div>
 			</c:forEach>
 			</div>
 		</div>

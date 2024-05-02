@@ -40,10 +40,18 @@
 
 
 <!-- bootstrap 우선순위 높이려면 이 위치 -->
+<link href="${pageContext.request.contextPath}/resources/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+body{
+	color: white;
+	width: 60%;
+	margin: 0 auto;
+	background: #084B8A;
+}
+</style>
 </head>
 <body>
-${dto}
 
 <div>
 	<div class="nav">
@@ -65,7 +73,7 @@ ${dto}
 		<div class="search"><input type="search"></div>
 	</div>
 	</div>
-	<img alt="" src="https://dummyimage.com/900x385/5d5d70/fff" class="img">
+	<div class="img"></div>
 	</div>
 <section>
 <article>
@@ -282,23 +290,16 @@ ${dto}
 <article>
 	<div>
 		<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#game-info-list">인기순</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#game-info-list-recent">최신순</a>
-    </ul>
-  </div>
   <div class="card-body">
     <div id="game-info-list">
     	<div class="game-info">
 			<c:forEach items="${dto}" var="val">
-			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+			<div class="game-info-sub">
+				<img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff">
 			    <div class="price">${val.gamePrice}<br></div>
 			    <div class="title">${val.gameTitle}<br></div>
 			    <div class="tag">${val.gameTag}<br></div>
+			</div>
 			</c:forEach>
 
 			<c:if test="${empty dto}">
@@ -307,13 +308,14 @@ ${dto}
 
 			</div>
 		</div>
-		 <div id="game-info-list-recent">
-    	<div class="game-info">
-			<c:forEach items="${dto}" var="val">
-			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
-			    <div class="price">${val.gamePrice}<br></div>
-			    <div class="title">${val.gameTitle}<br></div>
-			    <div class="tag">${val.gameTag}<br></div>
+		<div id="game-info-list-recent">
+			<c:forEach items="${latest}" var="lts">
+			<div class="game-info-sub-latest">
+				<img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff">
+			    <div class="price">${lts.gamePrice}<br></div>
+			    <div class="title">${lts.gameTitle}<br></div>
+			    <div class="tag">${lts.gameTag}<br></div>
+			</div>
 			</c:forEach>
 
 			<c:if test="${empty dto}">
@@ -321,10 +323,9 @@ ${dto}
 			</c:if>
 
 			</div>
+		</div>
 		</div>
   </div>
-</div>
-	</div>
 </article>
   	</section>
   	<c:if test="${empty sssLogin}">
@@ -378,11 +379,7 @@ function tabLoginClickHandler(){
 </script>
 
 
-	
-<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
+<script src="https://fastly.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

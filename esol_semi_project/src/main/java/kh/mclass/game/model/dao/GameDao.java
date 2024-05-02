@@ -3,6 +3,7 @@ package kh.mclass.game.model.dao;
 import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import kh.mclass.game.model.dto.GameInfoDto;
+import kh.mclass.game.model.dto.GameListInfoLatestDto;
 import kh.mclass.game.model.dto.GameDetailInfoDto;
 
 public class GameDao {
@@ -24,4 +25,13 @@ public class GameDao {
         }
         return null;
     }
+//    public List<GameListInfoLatestDto> gameLatest(SqlSession session){
+//    	try {
+//			return session.selectList("gameSortMapper.gameSort");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			System.out.println("dao에서 정렬 함수 돌리다 오류 발생"+e.getMessage());
+//		}
+//    	return null;
+//    }
 }
