@@ -5,15 +5,17 @@ width: 60%;
 }
 div.game-info-sub{
 position: relative;
-background:green;
+background:#0B243B;
 margin-bottom: 10px;
+color: white;
+font-weight: 140;
 }
 div.price{
 	position: absolute;
 	float:right;
 	top:25px;
 	right: 10px;
-	background: yellow;
+	color: #64FE2E;
 }
 div.title{
 	position: relative;

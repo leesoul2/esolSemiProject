@@ -14,6 +14,10 @@
     <typeAlias type="kh.mclass.game.model.dto.GameInfoDto" alias="GameInfoDto"/>
     <typeAlias type="kh.mclass.game.model.dto.GameDetailInfoDto" alias="GameDetailInfoDto"/>
     <typeAlias type="kh.mclass.board.model.dto.BoardListInfoDto" alias="BoardListInfoDto"/>
+    <typeAlias type="kh.mclass.board.model.dto.BoardDetailInfoDto" alias="BoardDetailInfoDto"/>
+    <typeAlias type="kh.mclass.member.model.dto.MemberDto" alias="MemberDto"/>
+    <typeAlias type="kh.mclass.member.model.dto.MemberInfoDto" alias="MemberInfoDto"/>
+    <typeAlias type="kh.mclass.member.model.dto.MemberLoginDto" alias="MemberLoginDto"/>
 </typeAliases>
 
 
@@ -41,9 +45,11 @@
 
 	</environments>
 	<mappers>
+		<mapper resource="mappers/member-mappers.xml"/>
 		<mapper resource="mappers/game-mappers.xml"/>
 		<mapper resource="mappers/gameDetail-mappers.xml"/>
 		<mapper resource="mappers/board-mappers.xml"/>
+		<mapper resource="mappers/boardDetail-mappers.xml"/>
 	</mappers>
 
 

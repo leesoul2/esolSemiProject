@@ -73,7 +73,8 @@ body{
 		<div class="search"><input type="search"></div>
 	</div>
 	</div>
-	<div class="img"></div>
+	<div>
+		<img alt="" src="https://dummyimage.com/900x385/5d5d70/fff" class="img">
 	</div>
 <section>
 <article>

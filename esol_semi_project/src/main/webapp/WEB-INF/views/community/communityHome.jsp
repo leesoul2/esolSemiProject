@@ -56,16 +56,29 @@
 		<div><a><button type="button">가이드</button></a></div>
 		<div><a><button type="button">평가</button></a></div>
 	</div>
-	<c:forEach items="${board}" var="vo">
-			<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
-			    <div class="price">${vo.boardTitle}<br></div>
-			    <div class="title">${vo.boardDetail}<br></div>
-			    <div class="tag">${vo.playTime}<br></div>
+		<c:forEach items="${board}" var="vo">
+			<div class="boardList">
+				<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
+			    <div class="title">${vo.boardTitle}<br></div>
+			    <div class="detail">${vo.boardDetail}<br></div>
+			    <div class="time">${vo.playTime}<br></div>
+			</div>
 			</c:forEach>
 
 			<c:if test="${empty board}">
 			    등록된 게시글이 없습니다.........
 			</c:if>
-
+		
+<script>
+$(loadedHandler);
+function loadedHandler(){
+	$("boardList").on("click", linkGameDetailHandler);
+}
+function linkGameDetailHandler(){
+	location.href="${pageContext.request.contextPath}/board";
+}
+	
+	
+</script>
 </body>
 </html>

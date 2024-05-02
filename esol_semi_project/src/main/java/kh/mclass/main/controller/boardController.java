@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kh.mclass.board.model.Service.BoardService;
+
 /**
- * Servlet implementation class LoginController
+ * Servlet implementation class boardController
  */
-@WebServlet("/logout")
-public class LogoutController extends HttpServlet {
+@WebServlet("/board")
+public class boardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LogoutController() {
+    public boardController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,12 +27,13 @@ public class LogoutController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("/logout doPost()");
-		//로그아웃
-		request.getSession().removeAttribute("sssLogin");
-		response.sendRedirect(request.getContextPath()+"/main");
-	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		BoardService service = new BoardService();
+		
+		request.setAttribute("board", service.board());
+		System.out.println("board"+service.board());
+		request.getRequestDispatcher("WEB-INF/views/community/board.jsp").forward(request, response);
+		return;
 	}
 
 

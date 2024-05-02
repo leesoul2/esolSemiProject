@@ -3,3 +3,21 @@ div.buttons{
 	justify-content: center;
 	
 }
+div.boardList{
+	display: inline-flex;
+	margin: 10px;
+	padding: 30px;
+	box-shadow: 3px 2px 5px black;
+}
+.title{
+	position: relative;
+}
+div.detail{
+	display: inline-block;
+	position: relative;
+	bottom: 0;
+}
+.time{
+	position: relative;
+	
+}

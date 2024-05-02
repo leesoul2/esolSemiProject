@@ -2,21 +2,25 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="boardMapper">
-    <resultMap type="kh.mclass.board.model.dto.BoardListInfoDto" id="BoardListInfoDtoResultMap">
+<mapper namespace="boardDetailMapper">
+    <resultMap type="kh.mclass.board.model.dto.BoardDetailInfoDto" id="BoardDetailInfoDtoResultMap">
+        <result column="MEM_ID" property="memId"/>
         <result column="BOARD_TITLE" property="boardTitle"/>
         <result column="BOARD_DETAIL" property="boardDetail"/>
         <result column="PLAY_TIME" property="playTime"/>
         <result column="COMMENT_COUNT" property="commentCount"/>
         <result column="REC_COUNT" property="recCount"/>
+        <result column="NOTREC_COUNT" property="notRecCount"/>
         <result column="EXPRESSION_COUNT" property="expressionCount"/>
     </resultMap> 
-    <select id="boardInfo" resultMap="BoardListInfoDtoResultMap">
+    <select id="boardDetailInfo" resultMap="BoardDetailInfoDtoResultMap">
         select  BOARD_TITLE as boardTitle, 
+		    MEM_ID as memId, 
 		    BOARD_DETAIL as boardDetail, 
 		    COMMENT_COUNT as commentCount,
 		    PLAY_TIME as playTime,
 		    REC_COUNT as recCount,
+		    NOTREC_COUNT as notRecCount,
 		    EXPRESSION_COUNT as expressionCount
 		from board
     </select>

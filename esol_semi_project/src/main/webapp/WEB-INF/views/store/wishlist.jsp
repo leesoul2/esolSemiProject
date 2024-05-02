@@ -45,32 +45,35 @@
 	<h1>${ memId }의 찜 목록</h1>
 	<div class="">
 		<div class="">
-			<div><input type="search" placeholder="이름 또는 태그로 검색" ></div>
+			<div>
+				<input type="search" placeholder="이름 또는 태그로 검색">
+			</div>
 			<div class="dropdown">
-		 	 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-			    정렬 기준
-			  </a>
-		
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			    <li><a class="dropdown-item" href="#">출시일</a></li>
-			    <li><a class="dropdown-item" href="#">인기순</a></li>
-			  </ul>
-		</div>
-		<div class="game-info-list">
-			<div class="game-info">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuButton1" data-bs-toggle="dropdown"
+					aria-expanded="false">정렬 기준</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li><a class="dropdown-item" href="#">인기순</a></li>
+					<li><a class="dropdown-item" href="#">최신순</a></li>
+				</ul>
+			</div>
+			<div class="game-info-list">
+				<div class="game-info">
 					<!-- private String gameTitle;
 					private int gamePrice;
 					private String gameTag; -->
-				<c:forEach items="${dto}" var="val">
-				<div class="game-info-sub">
-					<div><img alt="" src="https://dummyimage.com/180x70/b0a0b0/fff"></div>
-			    <div class="price">${val.gamePrice}<br></div>
-			    <div class="title">${val.gameTitle}<br></div>
-			    <div class="tag">${val.gameTag}<br></div>
+					<c:forEach items="${dto}" var="val">
+						<div class="game-info-sub">
+							<div class="price">${val.gamePrice}<br>
+							</div>
+							<div class="title">${val.gameTitle}<br>
+							</div>
+							<div class="tag">${val.gameTag}<br>
+							</div>
+						</div>
+					</c:forEach>
 				</div>
-			</c:forEach>
 			</div>
-		</div>
 		</div>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
