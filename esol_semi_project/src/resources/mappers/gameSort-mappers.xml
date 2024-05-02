@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!--  private int gameId;
+	private String gameTitle;
+	private int gamePrice;
+	private String gameTag;
+	private int gameGrade; -->
+	<mapper namespace="gameSortMapper">
+		<resultMap type="kh.mclass.game.model.dto.GameListInfoLatestDto" id="GameListInfoLatestDtoResultMap">
+			<result column="GAME_ID" property="gameId"/>
+			<result column="GAME_TITLE" property="gameTitle"/>
+			<result column="GAME_PRICE" property="gamePrice"/>
+			<result column="GAME_TAG" property="gameTag"/>
+		</resultMap>
+		<select id="gameSort" resultMap="GameListInfoLatestDtoResultMap">
+			select GAME_TITLE as gameTitle,
+      		GAME_PRICE as gamePrice,
+      		GAME_TAG as gameTag,
+            game_id as gameId
+      from game
+      order by game_id desc
+		
+		</select>
+	</mapper>

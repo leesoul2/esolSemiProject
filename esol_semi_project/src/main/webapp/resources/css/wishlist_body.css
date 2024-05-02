@@ -1,0 +1,29 @@
+div.game-info{
+}
+div.game-info-sub{
+	position: relative;
+	display: flex;
+	background: green;
+	margin-bottom: 10px;
+	
+}
+div.price{
+	position: absolute;
+	right: 0;
+	top: 25px;
+	
+}
+div.title{
+	position: absolute;
+	left: 200px;
+	top: 5px;
+}
+div.tag{
+	position: absolute;
+	left: 200px;
+	bottom: 5px;
+}
+div.game-info-sub img{
+	position: relative;
+	top:1px;
+}
